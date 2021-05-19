@@ -1,0 +1,581 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*para tomar valores de REM*/
+}
+
+*,
+*:before,
+*:after {
+    /* ??????? */
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /*para el tipo de fuente de letra */
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/*GLOBALES*/
+
+.contenedor {
+    width: 95%;
+    /*espacio en las orillas y se ve mejor*/
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    /**se recomienda siempre colocar esta funcion para que todas las imagenes queden bien de tamaño*/
+    max-width: 100%;
+    /*le dice a la imagen que tome todo el espacio maximo que pueda*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}   
+
+h4 {
+    font-size: 2.6rem;
+}
+
+.titulo{
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Special Elite', cursive;
+    font-size: 50px;
+}
+
+.historia {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 20px 0px -9px 20px;
+    text-align: left;
+    padding-top: 35px;
+}
+
+.artesanias {
+    color: #ffffff;
+    margin: 0px 0px 0 20px;
+    text-align: left;
+    padding-top: 0px;
+}
+
+/* UTILIDADES*/
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.centrar-texto {
+    text-align: center;
+    /* centra el texto o la imagen*/
+    margin: 10px;
+
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+/*HEADER*/
+
+.site-header {
+    background-image: url(../img/fondo.jpg);
+    height: 100%;
+    min-height: 17rem;
+    margin: 0;
+}
+
+.site-header2 {
+    background-image: url(../img/fondo.jpg);
+    height: 100%;
+    min-height: 5rem;
+    background-size: cover;
+}
+
+.contenedor2 {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.site-principal.inicio {
+    background-image: url(../img/olinala.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    min-height: 50rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*toma a "la barra" y a "h1" como variables y las separa verticalmente*/
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo {
+    margin: 10px 0 3px 0;
+}
+
+/*NAVEGACION*/
+
+.navegacion a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 2rem;
+    font-weight: 900;
+}
+
+.navegacion a:hover {
+    color: #f000bc;/* --a:hover-- debe ir junto sin espacios */
+}
+
+.hr{
+    margin: 0;
+    padding: 0;
+}
+
+.carrito {
+
+}
+
+/******* BOTONES *******/
+
+a.da-link {
+    font-family: 'Open Sans', 'sans-serif';
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 2px 20px;
+    background: black;
+    border: 3px solid #fff;
+    display: inline-block;
+    margin: 12px 20px;
+    text-align: left;
+    border-radius: 35px;
+    text-decoration: none;
+}
+
+a.da-link2 {
+    font-family: 'Open Sans', 'sans-serif';
+    color: deeppink;
+    font-size: 1.5em;
+    padding: 0px 11px;
+    background: none;
+    border: 3px solid #EBECE6;
+    display: inline-block;
+    margin: 12px 20px;
+    text-align: left;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+a.da-link3 {
+    font-family: 'Open Sans', 'sans-serif';
+    color: black;
+    font-size: 3rem;
+    padding: 9px 26px;
+    background: none;
+    border: 1px solid #EBECE6;
+    display: inline-block;
+    margin: 0px 19px;
+    text-align: left;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.da-link4 {
+    font-size: 2rem;
+    background: #e1e1e1;
+    margin: 8px;
+    padding: 8px 10px;  
+}
+
+a.da-link:hover{
+    background: #f000bc;
+}
+
+a.da-link2:hover{
+    background: #f000bc;
+    color: white;
+}
+
+a.da-link3:hover{
+    background: #f000bc;
+    color: white;
+}
+
+.da-link4:hover{
+    background: #d6cbd4;
+}
+
+
+
+/******************** MAIN **********************/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 0px;
+  }
+
+  img.pequeña{
+    width: 50px; height: 50px;
+  }
+  img.mediana{
+    width: 100%; height: auto;
+  }
+  img.grande{
+    width: 200px; height: 200px;
+  }
+
+/***********ANUNCIO*********/
+.anuncio {
+    /*coloca un borde al rededor "Tamaño" "Estilo" "color"*/
+    background-color: none;
+    margin-bottom: 2rem;
+    /* separacion hacia afuera 2rem */
+}
+
+.contenido-anuncio {
+    padding: 0rem;
+    /*realiza un espacio de 2 rem en todas las direcciones*/
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    /*se puede colocar ".contenido-anuncio h3, p" */
+    margin: 0;
+}
+
+.precio {
+    font-family: 'Sansita Swashed', cursive;
+    color: rgb(94, 221, 94);
+    font-size: 3rem;
+    font-weight: 400;
+    /*grosor de texto*/
+}
+
+.descripcion-texto {
+    font-family: 'Vollkorn', serif;
+    color: black;
+}
+
+.producto-texto {
+    font-family: 'Cinzel', serif;
+}
+
+.contenedor-productos {
+    max-width: 100rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/** CONTACTO-HOME **/
+
+.imagen-contacto {
+    background-image: url(../img/contacto.png);
+    /*coloca la imagen de la carpeta seleccionada solo en la seccion de "imagen-contacto" */
+    background-position: center center;
+    /*para centrar la imagen*/
+    background-size: cover;
+    /*ayuda a que se vea mejor la foto */
+    height: 40rem;
+    /* Da la altura de la imagen (arriba para abajo)  */
+    display: flex;
+    align-items: center/*arriba o abajo*/
+}
+
+.contenido-contacto {
+    flex: 0 0 95%;
+    /*factor de crecimiento y se ve bien al no pegar las letras hasta la orilla de la pantalla*/
+    color: black;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+.contenido-contacto a {
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+
+/***** FOOTER ******/
+
+.site-footer {
+    background-image: url(../img/fondo.jpg);
+    height: 100%;
+    min-height: 10rem;
+    margin: -16px 0px 0px 0;
+
+}
+
+.contenedor-footer {
+    padding: .5rem 0;
+    /* espacio de 3rem "arri-abaj" espacio de 0.0 (izq-der)*/
+    text-align: center;
+}
+
+.copyright {
+    margin: 0;
+    /* elimiona el ultimo margen de la pagina (espacio en blanco) */
+    color: black;
+}
+
+.navegacion-footer a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 2rem;
+    font-weight: 900;
+}
+
+.navegacion-footer a:hover {
+    color: #f000bc;/* --a:hover-- debe ir junto sin espacios */
+}
+
+/************ INTRNAS ***************/
+
+/** CONTACTO **/
+
+.contacto p {
+    /* para los comentarios "p" del area contacto */
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+    /* distancia entre "como desea contactar/telefono-email" y si eligio/fecha*/
+}
+
+legend {
+    font-size: 2rem;
+    /* hace mas grande las "legends" */
+    color: #4f4f4f;
+}
+
+label {
+    font-weight: 700;
+    /* resalta la letra */
+    text-transform: uppercase;
+    /* tranforma minusculas en MAYUSCULAS */
+    display: block;
+    /* coloca el formulario en vertical */
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    /*se le da el "estilo" a los bloques de llenado */
+    padding: 1rem;
+    /* "input:not([type="submit"])" es para que le aplique a todos menos al boton por que es tipo "type" */
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+select {
+    /*lo introducimos arriba para que tambien de el estilo a la parte de "select" */
+    -webkit-appearance: none;
+    /* prefijo ?????????????? */
+    appearance: none;
+    /* ???????? */
+}
+
+textarea {
+    height: 20rem;
+    /* tamaño del area del texto "text" */
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    /* separacion entre telefono/e-mail */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* alinea los elementos */
+}
+
+.imagen-contacto1 {
+    background-image: url(../img/contacto1.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    padding: 15rem;;
+}
+
+/******** ARTESANIAS *********/
+
+.imagen-artesanias {
+    background-image: url(../img/artesanias.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    padding: 15rem;;
+}
+
+/** NOSOTROS **/
+
+.contenido-nosotros {
+    display: grid;
+    /* se convierte en cuadricula */
+    grid-template-columns: 50% 50%;
+    /*reparte el espacio en un 50% para cada uno*/
+    grid-column-gap: 2rem;
+    /* da 2 rem de separacion entre cada uno */
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    /* estilo de relleno de letra "negrita" */
+    font-size: 2rem;
+    /* tamaño de letra */
+    margin: 0;
+    padding: 0;
+    /* para mejor vista del texto */
+}
+
+/***** Mapa *****/
+
+.mapa {
+    height: 300px;
+}
+
+.coordenadas {
+    margin: 10px;
+}
+
+/******** GALERIA *********/
+
+.contenedor-galeria {
+    max-width: 1000px;
+    /*maximo tamaño de pantalla*/
+    width: 95%;
+    /*deja 5px de espacio entre la pagina y borde, dispositivo movil maximo 95%*/
+    margin: 0 auto;
+    /* 0px arriba y abajo---automatico izq y der*/
+}
+
+.lista-producto {
+    display: grid;
+    /*hacemos grid el "div" padre*/
+    grid-template-columns: repeat(4, 1fr);
+        /*hace columnas (4) y da el 25% a cada una (1fr)*/
+    grid-gap: 1rem;
+    /*da separacion de 20px entre cada grid (producto) (asi --> #)*/
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.galeria img {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/******** COTIZADOR *********/
+
+.orden {
+    text-align: left;
+    margin-bottom: 10px;
+    margin: 2rem 0 0 0;
+}
+        
+.orden input {
+    margin: 10px 0 0 0;
+}
+
+.contenedor-cotizador {
+    width: 50%;
+    max-width: 52rem;
+    margin: 20px 0 40px 60px;
+}
+
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-around;
+}
+
+#suma-total {
+    /*diseño de la impresion del total a pagar*/
+    text-align: center;
+    font-size: 2em;
+    color: #fe4918;
+}
+
+/*********** COMPRAS ************/
+
+.wrapper-compras {
+    display: grid;
+    grid-template-columns: .3fr repeat(3, 1fr) .3fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    margin-bottom: 10px;
+}
+    
+.div1 { 
+    grid-area: 1 / 2 / 3 / 4; 
+    display:block;
+    margin:auto;    
+}
+    
+.div2 { 
+    grid-area: 1 / 4 / 2 / 5;
+    border: 2px solid #4f4f4f; 
+}
+
+.div3 { 
+    grid-area: 2 / 4 / 3 / 5; 
+    border: 2px solid #4f4f4f;    
+}
+
+.div3 ul {
+    list-style: none;
+    text-align: start;
+}
+
+.img-compras {
+    width: 60%;
+    align-content: center;
+}
+
+.centrar-textocompras {
+    text-align: center;
+    margin: 15px 20px;
+    padding: 0px 0px 10px 0px;
+}
+
+.fa-shopping-cart{
+    font-size: 25px;
+    margin-left: 100px;
+}
+
+

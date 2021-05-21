@@ -24,12 +24,12 @@
 						<div class="wrapper">
 							<?php while($fila = $peticion->fetch_assoc() ) { ?>
 								<div class="anuncio mediana">
-									<a href="compras.php?id=<?php echo $fila['id']; ?>"><img src="img/artesanias/<?php echo $fila['url_imagen']; ?>" alt="<?php echo $fila['id']; ?>"></a>
+									<a href="compras.php?id=<?php echo esc_attr($fila['id']); ?>"><img src="img/artesanias/<?php echo esc_attr($fila['url_imagen']); ?>" alt="<?php echo $fila['id']; ?>"></a>
 									<div class="contenido-anuncio">
-									<h3 value="<?php $fila['artesania']; ?>" class="producto-texto arte"><?php echo $fila['artesania']; ?></h3>
+									<h3 value="<?php esc_attr($fila['artesania']); ?>" class="producto-texto arte"><?php echo esc_attr($fila['artesania']); ?></h3>
 										<p class="descripcion-texto arte"><?php echo nl2br($fila['descripcion']); ?></p>
-										<p class="precio arte">$ <?php echo $fila['precio']; ?></p>
-										<a href="compras.php?id=<?php echo $fila['id']; ?>" class="da-link2">Comprar</a>
+										<p class="precio arte">$ <?php echo esc_html($fila['precio']); ?></p>
+										<a href="compras.php?id=<?php echo esc_attr($fila['id']); ?>" class="da-link2">Comprar</a>
 									</div>
 								</div> 
 								<?php $conn->close(); 
@@ -43,3 +43,9 @@
         
 
 <?php require 'inc/templates/footer.php';  ?>
+
+
+<!-- esc_attr() - 
+esc_html() - 
+
+<p class="precio arte" esc_attr() > esc_html() </p> -->

@@ -29,15 +29,15 @@
 
 ## Contenido del proyecto
 
-Pagina Principal:
-    - Mapa de ubicacion (Nosotros)
-    - Galeria de imagenes
-    - Cotizador
-    - Formulario de contacto
-    - Carrito de compras (en construccion)
+    - Pagina Principal:
+        - Mapa de ubicacion (Nosotros)
+        - Galeria de imagenes
+        - Cotizador
+        - Formulario de contacto
+        - Carrito de compras (en construccion)
 
-Administrador de pagina:
-    - CRUD (Administradores, Productos, Clientes)
-    - Control de sesiones de administradores
-    - Control de pagos (en construccion)
-    - Control de pedidos (en construccion)
+    - Administrador de pagina:
+        - CRUD (Administradores, Productos, Clientes)
+        - Control de sesiones de administradores
+        - Control de pagos (en construccion)
+        - Control de pedidos (en construccion)

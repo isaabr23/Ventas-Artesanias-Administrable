@@ -1,5 +1,4 @@
 
-
 var artesania = document.getElementById('artesania').getAttribute('value');
 var tamano = document.getElementById('tamano').getAttribute('value');
 var descripcion = document.getElementById('descripcion').getAttribute('value'); 
@@ -9,20 +8,18 @@ var carrito = document.getElementById('carrito'); // Boton añadir a carrito
 // var cotizar = document.getElementById('cotizar');   // Boton Cotizar
 
 
-carrito.addEventListener('click', carritoC); 
-// cotizar.addEventListener('click', cotizarP);    // Escucha el evento del click de boton cotizar
-
-
-
-var jsonarray = []; //se guardan los objetos l dar click en "añadir a carrito"
-var contadorcarrito = 0;
-
 const producto = {    /// array de la bd
     artesania: artesania,
     tamano: tamano,
     descripcion: descripcion,
     precio: precio
 }
+
+var jsonarray = []; //se guardan los objetos l dar click en "añadir a carrito"
+var contadorcarrito = 0;
+
+carrito.addEventListener('click', carritoC); 
+// cotizar.addEventListener('click', cotizarP);    // Escucha el evento del click de boton cotizar
 
 
 
@@ -37,6 +34,7 @@ function carritoC(event) {
     var encarrito = []; // Array de productos
 
     jsonarray.push(producto); // Se agregan objetos seleccionados de la BD al array *********************////////////////
+    encarrito.push(producto);
     // console.log(jsonarray);
     // console.log(contadorcarrito);
 
@@ -48,18 +46,19 @@ function carritoC(event) {
     //   copia();
 }
 
-function contador(contadorcarrito){
+// function contador(contadorcarrito){
 
-    var suma =+ contadorcarrito;
-    var totproductoscarrito = [];
-    var total = totproductoscarrito + suma;
+//     var suma =+ contadorcarrito;
+//     var totproductoscarrito = [];
+//     var total = totproductoscarrito + suma;
 
-    console.log( "total " + total);
+//     console.log( "total " + total);
 
-}
+// }
 
-var X = localStorage.getItem('Carro');
-console.log(X);
+// var X = localStorage.getItem('Carro');
+// document.getElementById("lista5").innerHTML = X;
+// console.log(X);
 
 
 // Obtener el PRECIO de cada uno de los objetos seleccionados
@@ -106,3 +105,9 @@ console.log(X);
 //       document.getElementById("lista1").innerHTML = food;
 
 // }
+
+function addProducto(){
+    var X = JSON.parse(localStorage.getItem('Carro'));
+    document.getElementById("lista5").innerHTML = X;
+    console.log(X);
+}

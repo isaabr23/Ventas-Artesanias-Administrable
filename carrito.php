@@ -15,6 +15,8 @@
 						</div>
 						<br>
 							<h4>Aqui Se Añaden</h4>
+					
+							<label type="text" id="lista5"></label><br> 
 							<div id="lista1"></div>
 							<div id="listaproductos" style="text-align: center; font-weight: 900;">1</div>
 						<br>

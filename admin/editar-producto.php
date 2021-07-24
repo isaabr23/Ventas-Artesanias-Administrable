@@ -1,4 +1,4 @@
-<?php 
+<?php
   include 'sesiones.php';
   require_once 'funciones/funciones.php';
   include 'templates/header.php';
@@ -18,7 +18,7 @@
     </div>
 
     <div>
-            <?php 
+            <?php
                 $stm = "SELECT * FROM productos WHERE id = $id";
                 $resultado = $conn->query($stm);
                 $fila = $resultado->fetch_assoc();

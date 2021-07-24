@@ -1,4 +1,4 @@
-<?php 
+<?php
   include 'sesiones.php';
   include 'templates/header.php';
 ?>
@@ -8,13 +8,14 @@
     <p>Bienvenid@  <span class="nombre"><?php echo $_SESSION['usuario']; ?></span></p>
     <a href="login.php?cerrar_sesion=true">Cerrar Sesión</a>
 </div>
-		
+        
 <h1>Tabla de Productos</h1>
 <div class="contenedor">
     <div class="botones-crear">
-        <?php if ($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 2): ?> <!-- Para que solo lo puedan ver ciertos administradores (coloca "1" en la BD "nivel") -->
+        <?php if ($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 2) :
+            ?> <!-- Para que solo lo puedan ver ciertos administradores (coloca "1" en la BD "nivel") -->
                 <a href="crear-producto.php" class="da-link">Añadir Producto</a> <?php // Boton verde de AÑADIR ?>
-            <?php if ($_SESSION['nivel'] == 2): ?>    
+            <?php if ($_SESSION['nivel'] == 2) : ?>    
                 <a href="crear-admin.php" class="da-link">Añadir Administrador</a> <?php // Boton verde de AÑADIR ?>
                 <a href="clientes-admin.php" class="da-link" >Clientes</a>
             <?php endif; ?>
@@ -32,20 +33,18 @@
             <th>Administracion</th>
         </tr>    
 
-        <?php 
-            try {
-                require_once ('funciones/funciones.php'); //para conectar con la base de datos
-                $stm = $conn->prepare("SELECT * FROM productos");
-                $stm->execute();
-                $peticion = $stm->get_result();
-
-                } catch (\Exception $e) {  //En caso de que haya falla en conexion con bd mandaramensaje pero la pagina seguira funcionando
-                    echo $e->getMessage();
-                }
+        <?php
+        try {
+            require_once('funciones/funciones.php'); //para conectar con la base de datos
+            $stm = $conn->prepare("SELECT * FROM productos");
+            $stm->execute();
+            $peticion = $stm->get_result();
+        } catch (\Exception $e) {  //En caso de que haya falla en conexion con bd mandaramensaje pero la pagina seguira funcionando
+            echo $e->getMessage();
+        }
         ?>
     <br>
         <?php while ($fila = $peticion->fetch_assoc()) { ?>
-    
             <tr>
                 <td><?php echo $fila['artesania']; ?></td>
                 <td><?php echo $fila['tamano']; ?></td>
@@ -55,7 +54,7 @@
                 <td><?php echo $fila['fecha']; ?></td>
                 <td>
 
-                    <?php if ($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 2): ?>
+                    <?php if ($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 2) : ?>
                         <!-- EDITAR -->
                         <a href="editar-producto.php?id=<?php echo $fila['id']; ?>">
                         <i class="fa fa-pencil"></i></a>
@@ -68,7 +67,7 @@
                 </td>
             </tr>
         
-        <?php $conn->close(); 
+            <?php $conn->close();
         } ?>
 
     </table>

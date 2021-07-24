@@ -55,5 +55,4 @@ class FuturePayment extends Payment
         $credential = $apiContext->getCredential();
         return $credential->getRefreshToken($apiContext->getConfig(), $authorizationCode);
     }
-
 }

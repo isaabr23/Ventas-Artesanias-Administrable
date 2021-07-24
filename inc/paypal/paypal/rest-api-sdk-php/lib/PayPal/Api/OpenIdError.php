@@ -1,4 +1,5 @@
 <?php
+
 namespace PayPal\Api;
 
 use PayPal\Common\PayPalModel;
@@ -80,6 +81,4 @@ class OpenIdError extends PayPalModel
     {
         return $this->error_uri;
     }
-
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * API handler for OAuth Token Request REST API calls
  */

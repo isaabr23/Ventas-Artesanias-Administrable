@@ -1,0 +1,17 @@
+{
+  "name": "@wpsh/local",
+  "version": "1.0.0",
+  "description": "A Docker Compose development environment for any project.",
+  "homepage": "https://github.com/wpsh/wpsh-local#readme",
+  "author": "Kaspars Dambis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpsh/wpsh-local.git"
+  },
+  "keywords": [
+    "docker-compose",
+    "docker",
+    "vagrant"
+  ]
+}

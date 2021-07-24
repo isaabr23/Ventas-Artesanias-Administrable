@@ -50,9 +50,9 @@
             </fieldset>
 
             <div class="form-group">
-			  <input type="hidden" name="cliente" value="nuevo">
-			  <button type="submit" class="da-link4" value="Enviar">Enviar</button>
-		  </div>
+              <input type="hidden" name="cliente" value="nuevo">
+              <button type="submit" class="da-link4" value="Enviar">Enviar</button>
+          </div>
         </form>
     </main>
 

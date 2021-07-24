@@ -7,23 +7,23 @@ namespace Composer\Autoload;
 class ComposerStaticInit728f96e67824ff0c88d9b31fcd5c7681
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'P' =>
         array (
             'Psr\\Log\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Log\\' => 
+        'Psr\\Log\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'P' => 
+        'P' =>
         array (
-            'PayPal' => 
+            'PayPal' =>
             array (
                 0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
             ),
@@ -36,7 +36,6 @@ class ComposerStaticInit728f96e67824ff0c88d9b31fcd5c7681
             $loader->prefixLengthsPsr4 = ComposerStaticInit728f96e67824ff0c88d9b31fcd5c7681::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit728f96e67824ff0c88d9b31fcd5c7681::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit728f96e67824ff0c88d9b31fcd5c7681::$prefixesPsr0;
-
         }, null, ClassLoader::class);
     }
 }

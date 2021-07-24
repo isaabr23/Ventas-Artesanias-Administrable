@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once 'funciones/funciones.php';
 
@@ -9,7 +9,7 @@ if ($_POST['registro'] == 'eliminar') {
         $stm = $conn->prepare("DELETE FROM clientes WHERE id = ?");
         $stm->bind_param("i", $id_borrar);
         $stm->execute(); // Corre el SQL
-        if($stm->affected_rows) {
+        if ($stm->affected_rows) {
             $respuesta = array(
                      'respuesta' => 'exito',
                      'id_eliminado' => $id_borrar
@@ -18,7 +18,7 @@ if ($_POST['registro'] == 'eliminar') {
                 $respuesta = array(
                     'respuesta' => 'error'
                 );
-            }
+        }
     } catch (Exception $e) {
         $respuesta = array(
          'respuesta' => $e->getMessage()

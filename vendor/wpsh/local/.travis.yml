@@ -1,0 +1,15 @@
+language: ruby
+
+install:
+  - bundle install
+
+script:
+  - bash -c 'shopt -s globstar; shellcheck **/*.sh'
+  - rubocop
+
+notifications:
+  email: false
+
+branches:
+  only:
+  - master

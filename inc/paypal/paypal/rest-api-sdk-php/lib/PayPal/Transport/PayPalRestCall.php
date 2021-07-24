@@ -1,4 +1,5 @@
 <?php
+
 namespace PayPal\Transport;
 
 use PayPal\Core\PayPalHttpConfig;
@@ -58,8 +59,7 @@ class PayPalRestCall
         $httpConfig->setHeaders($headers +
             array(
                 'Content-Type' => 'application/json'
-            )
-        );
+            ));
 
         // if proxy set via config, add it
         if (!empty($config['http.Proxy'])) {

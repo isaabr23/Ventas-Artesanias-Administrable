@@ -95,6 +95,38 @@ h4 {
 
 /*HEADER*/
 
+.header-principal{
+    display: flex;
+}
+
+.one {
+    flex-grow: 3;
+}
+
+.two {
+  margin-top: 10px;  
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #f819f8;
+  -webkit-box-shadow: 0px 1px 3px #d665d6;
+  -moz-box-shadow: 0px 1px 3px #d665d6;
+  box-shadow: 0px 1px 3px #d665d6;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 18px;
+  background: #d113c4;
+  padding: 1px 13px 1px 13px;
+  border: solid #000000 2px;
+  text-decoration: none;
+  height: 40%;
+}
+
+.two:hover {
+    background: #161316;
+    text-decoration: none;
+  }
+
 .site-header {
     background-image: url(../img/fondo.jpg);
     height: 100%;
@@ -152,10 +184,6 @@ h4 {
 .hr{
     margin: 0;
     padding: 0;
-}
-
-.carrito {
-
 }
 
 /******* BOTONES *******/

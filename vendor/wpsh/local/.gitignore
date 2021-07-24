@@ -1,0 +1,5 @@
+/vendor
+/.vagrant
+/node_modules
+/composer.lock
+Gemfile.lock

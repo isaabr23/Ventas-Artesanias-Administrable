@@ -1,4 +1,3 @@
-<?php 
+<?php
 
-    require ('../inc/funciones/conexion-bd.php');
-?>
+    require('../inc/funciones/conexion-bd.php');

@@ -66,20 +66,18 @@ include 'sesiones.php';  ?>
                         <th>Administracion</th>
                     </tr>    
 
-                    <?php 
-                        try {
-                            require_once ('funciones/funciones.php'); //para conectar con la base de datos
-                            $stm = $conn->prepare("SELECT * FROM usuarios");
-                            $stm->execute();
-                            $peticion = $stm->get_result();
-
-                            } catch (\Exception $e) {  //En caso de que haya falla en conexion con bd mandaramensaje pero la pagina seguira funcionando
-                                echo $e->getMessage();
-                            }
+                    <?php
+                    try {
+                        require_once('funciones/funciones.php'); //para conectar con la base de datos
+                        $stm = $conn->prepare("SELECT * FROM usuarios");
+                        $stm->execute();
+                        $peticion = $stm->get_result();
+                    } catch (\Exception $e) {  //En caso de que haya falla en conexion con bd mandaramensaje pero la pagina seguira funcionando
+                        echo $e->getMessage();
+                    }
                     ?>
                     <br>
                     <?php while ($fila = $peticion->fetch_assoc()) { ?>
-                
                         <tr>
                             <td><?php echo $fila['usuario']; ?></td>
                             <td><?php echo $fila['nivel']; ?></td>
@@ -95,7 +93,7 @@ include 'sesiones.php';  ?>
                             </td>
                         </tr>
                     
-                    <?php $conn->close(); 
+                        <?php $conn->close();
                     } ?>
 
                 </table>

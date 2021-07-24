@@ -1,4 +1,5 @@
 <?php
+
 /**
  * API handler for all REST API calls
  */

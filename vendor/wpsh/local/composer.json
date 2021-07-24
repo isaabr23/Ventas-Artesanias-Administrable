@@ -1,0 +1,7 @@
+{
+  "name": "wpsh/local",
+  "description": "A Docker Compose development environment for any project.",
+  "type": "library",
+  "license": "MIT",
+  "require": {}
+}
